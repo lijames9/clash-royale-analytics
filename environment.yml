@@ -1,0 +1,26 @@
+name: clash
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  # data collection
+  - requests
+  - python-dotenv
+  - tqdm
+  # data wrangling
+  - pandas
+  - numpy
+  - pyarrow
+  # OpenBLAS, not MKL: MKL's OpenMP threading layer crashed every numpy matrix op on Windows
+  - libblas=*=*openblas
+  # modelling and stats
+  - scikit-learn
+  - statsmodels
+  - scipy
+  # notebooks and plots
+  - jupyterlab
+  - ipykernel
+  - matplotlib
+  # testing
+  - pytest
